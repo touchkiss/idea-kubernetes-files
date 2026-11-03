@@ -1,0 +1,9 @@
+.gradle/
+.intellij/
+.idea/
+build/
+*.iml
+local.properties
+*.key
+*.license
+.intellijPlatform/

@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>io.github.kubernetesfiles</id>
+    <name>Kubernetes Files</name>
+    <vendor>Local Tools</vendor>
+    <description><![CDATA[
+    Browse Kubernetes container files inside IntelliJ IDEA. Upload local files by drag and drop,
+    download remote files, and track cancellable binary transfers with SHA-256 verification.
+    With Kubernetes enabled, right-click a Pod or container in Services and choose 浏览容器文件…,
+    or use the matching folder toolbar button to open Files beside the native Information / Shell tabs.
+    Multi-container Pods expose a container submenu; each container has its own reusable Files tab.
+    Cancellable transfers report file progress and speed through the IDE background task indicator.
+    Configure the default remote directory under Settings / Tools / Kubernetes Files, or leave it empty to detect the container working directory.
+    Also available from Tools or Control+Option+Shift+K (⌃⌥⇧K) on macOS / Ctrl+Alt+Shift+K on Windows/Linux.
+    Requires kubectl and a POSIX shell in the container. Targeted at IDEA Ultimate 2026.2.
+    ]]></description>
+    <depends>com.intellij.modules.platform</depends>
+    <depends optional="true" config-file="kubernetes.xml">com.intellij.kubernetes</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable parentId="tools" instance="io.github.kubernetesfiles.ui.BrowserSettingsConfigurable"
+                                 id="io.github.kubernetesfiles.settings" displayName="Kubernetes Files"/>
+    </extensions>
+</idea-plugin>

@@ -1,0 +1,13 @@
+<idea-plugin>
+  <actions>
+    <group id="KubernetesFiles.OpenSelectedContainer" class="io.github.kubernetesfiles.integration.OpenSelectedContainerAction" popup="true"
+            text="浏览容器文件…" description="浏览选中 Pod 或容器的文件，支持上传和下载" icon="AllIcons.Nodes.Folder">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <add-to-group group-id="ServiceViewItemPopup" anchor="first"/>
+      <add-to-group group-id="ServiceViewItemToolbar" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt shift K"/>
+      <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl alt shift K"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl alt shift K"/>
+    </group>
+  </actions>
+</idea-plugin>
